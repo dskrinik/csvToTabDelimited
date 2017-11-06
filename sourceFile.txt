@@ -1,0 +1,10 @@
+3,John Watson,Harvard
+4,Jessica Johns,Yale
+6,Joseph Loop,Yale
+7,Matt Berry,Yale
+1,Dave Skrinik,Suny
+2,Hope Skrinik,Suny
+9,Mark Malone,Suny
+9,Mark Malone,Suny
+8,Mark Malone,Suny
+5,John Watson,Siena
