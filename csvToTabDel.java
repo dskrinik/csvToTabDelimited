@@ -15,7 +15,8 @@ public class csvToTabDel{
 		studentListHolder = new HashSet<>();
 	
 		String[] result = file.trim().split("\\s*,\\s*");
-			for(int i = 0; i < result.length-2; i+=3){				
+			
+			for(int i = 0; i < result.length-2; everyThird(i)){				
 				schoolHolder = new School(result[i+2]);
 				schoolHolder.addStudent(new Student(result[i], result[i+1]));
 					Iterator<School> it = schoolListHolder.iterator();
@@ -28,6 +29,10 @@ public class csvToTabDel{
 				schoolListHolder.add(schoolHolder);
 			}
 		writeToFiles(schoolListHolder);
+	}
+	
+	void everyThird(int i){
+		i +=3;
 	}
 
 	void writeToFiles(Set<School> list){
@@ -61,7 +66,7 @@ public class csvToTabDel{
 		try{
 			BufferedReader br = new BufferedReader(new FileReader(fileName));
 			while((tester = br.readLine())!= null){
-				result +=(tester+", ");
+				result = ", " + result;
 			}
 		} catch (IOException e) { e.printStackTrace();}
 		return result;
