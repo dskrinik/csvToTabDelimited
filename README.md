@@ -1,19 +1,43 @@
 # csvToTadDelimited
 
-Forward Motion Assignment 
-JAVA1 - CSV to Tab Delimited
-Write an object oriented program to transform a CSV file into a several tab delimited files.  For example, the CSV will be in the format of STUDENT_ID, STUDENT_NAME, SCHOOL.  The CSV should contain the following data:
+I wrote this Java program while working for Jahnel Group. 
 
-7,Mike Jones,Harvard
-9,Dave Adams,Columbia
-1,Amy Washington,Harvard
-44,William Harrison,Yale
-11,Erica August,Harvard
-33,John Kochem,Columbia
-99,Derek Carney,Columbia
+My assignment was to write an Object-Oriented program that reads in a file with comma-delimited list of student names, student IDs, and student schools. The program should parse the list to produce and save a separate file for each school name. Each school file should contain a tab-delimited list of students that belong to that school. 
 
-The java program will read this CSV file in and produce a separate tab delimited file for each school.  Your program must be flexible enough to handle any number of schools.  Also, you should create a Student class that contains id, name and school variables.  As you loop through the students, you should instantiate a new Student for each row.
+Additional requirements: 
+Write this code in a simple text editor and compile and run it via the command line. Comments are not permitted for this exercise. The program should handle any number of schools. 
 
-DO NOT use Eclipse.  Write this code in a simple text editor and compile and run it via the command line.
-Comments
-You do not have permission to add comments.
+My example of a CSV file for this program. 
+```
+3,John Watson,Harvard
+4,Jessica Johns,Yale
+6,Joseph Loop,Yale
+7,Matt Berry,Yale
+1,Dave Skrinik,Suny
+2,Hope Skrinik,Suny
+9,Mark Malone,Suny
+9,Mark Malone,Suny
+8,Mark Malone,Suny
+5,John Watson,Siena
+```
+Notice that Mark Malone repeats 3 times. Yet only 2 times Mark Malone has the same ID of 9. Records with same name and ID should be ignored. Records with same names but different IDs should not be ignored since a school may contain students with identical names, so long as they have a unique IDs.
+
+The resulting output school files and their students should be the following. 
+```
+Harvard
+3	John Watson
+
+Yale
+6	Joseph Loop
+7	Matt Berry
+4	Jessica Johns
+
+Suny
+2	Hope Skrinik
+1	Dave Skrinik
+8	Mark Malone
+9	Mark Malone
+
+Siena
+5	John Watson
+```
