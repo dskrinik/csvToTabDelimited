@@ -1,4 +1,4 @@
-# csvToTadDelimited
+# csvToTabDelimited
 
 I wrote this Java program while working for Jahnel Group. 
 
